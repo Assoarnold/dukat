@@ -22,5 +22,5 @@ external interface BaseEvent {
 }
 
 external open class BoxStringEvent : BaseEvent {
-    override fun queryByReturnType(query: String, parameters: Array<Any>? = definedExternally): InvariantBox<String>
+    override fun queryByReturnType(query: String, parameters: Array<Any>?): InvariantBox<String>
 }

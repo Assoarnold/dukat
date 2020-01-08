@@ -259,18 +259,14 @@ private class ClassLikeOverrideResolver(private val context: ModelContext, priva
     }
 
     private fun TypeModel.isOverriding(otherParameterType: TypeModel, box: TypeValueModel? = null): Boolean {
+        if (otherParameterType.isAny()) {
+            return true
+        }
+
         val inbox = (box == null || box.value == IdentifierEntity("Array"))
 
         if (isEquivalent(otherParameterType) && inbox) {
             return true
-        }
-
-        if (otherParameterType.isAny()) {
-            return if (!inbox) {
-                this is TypeParameterReferenceModel
-            } else {
-                true
-            }
         }
 
         if ((this is TypeValueModel) && (otherParameterType is TypeValueModel)) {
@@ -286,8 +282,10 @@ private class ClassLikeOverrideResolver(private val context: ModelContext, priva
                         return true
                     }
                 } else if (params.size == otherParameterType.params.size) {
+                    println("HERE ${this} ${otherParameterType} ${isSameClass}")
                     if (isSameClass) {
                         return params.zip(otherParameterType.params).all { (paramA, paramB) ->
+                            println("TT ${paramA.type} \n\t ${paramB.type} ${isOverriding(paramB.type, this)}")
                             paramA.type.isOverriding(paramB.type, this)
                         }
                     }

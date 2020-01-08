@@ -41,7 +41,7 @@ external open class BoxStringEvent : BaseEvent {
     override fun getElement(): HTMLElement
     override fun <T : Shape> transform(shape: T?): T
     override var prop: String
-    open fun queryByReturnType(query: String, parameters: Array<Any>? = definedExternally): InvariantBox<String>
+    override fun queryByReturnType(query: String, parameters: Array<Any>?): InvariantBox<String>
 }
 
 external interface NumberEvent : BaseEvent {
