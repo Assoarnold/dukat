@@ -1,0 +1,56 @@
+plugins {Bahasa melanesia-wp
+    id 'kotlin'
+}
+
+dependencies {Bahasa Daerah }
+
+Kamus bahasa melanesia-west papua(project(":ast-common"))
+  
+{Bilangan angka melanesia-west papua}
+
+1.pakiat
+2.phire
+3.hinagent
+4.wuruth
+5.isalikic
+6.falvalic
+7.sawith
+8.lichin
+9.shogo
+10.num
+
+11.kiath
+12.kiath phire
+13.kiath hinagent
+14.kiath wuruth
+15.kiath isalikic
+16.kiath falvalic
+17.kiath sawith
+18.kiath lichin
+19.kiath shogo
+
+20.phire numty
+21.phire numty pakiat
+22.phire numty phire
+23.phire numty hinagent
+24.phire numty wuruth
+25.phire numty isalikic
+26.phire numty falvalic
+27.phire numty sawith
+28.Phire numty lichin
+29.phire numty shogo
+
+30.hinagent numty
+40.wurut numty
+50.isalikic numty
+60.falvalic numty
+70.sawith numty
+80.lichin numti
+90.shogo numty
+
+100. Utinoser
+1000. Samfur
+1.000.000 wutalium
+1.000.000.000 Wayalium
+1.000.000.000.000 assolium
+
